@@ -1,12 +1,18 @@
-
-**Work in progress**
-
 # Demo setup for [embed-react-app-envs](https://github.com/garronej/embed-environnement-variables)
 
-
-
-Build docker image:
+## In development environment
 
 ```bash
-
+REACT_APP_BAZ="Value of baz passed inline" yarn start
 ```
+
+![image](https://user-images.githubusercontent.com/6702424/111198629-0dff9200-85c0-11eb-873b-42aac78a2a4e.png)
+
+## In production environment
+
+```bash
+docker build -t garronej/embed-react-app-envs-demo-app:main .
+
+BAZ="Value of baz on the server" docker run -it -p 8083:80 garronej/embed-react-app-envs-demo-app:main
+```
+Reach http://localhost:8083
