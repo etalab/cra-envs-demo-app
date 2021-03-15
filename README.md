@@ -3,6 +3,7 @@
 ## In development environment
 
 ```bash
+yarn
 REACT_APP_BAZ="Value of baz passed inline" yarn start
 ```
 
