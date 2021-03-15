@@ -1,6 +1,6 @@
 # Demo setup for [react-envs](https://github.com/garronej/react-envs)
 
-This is an hello world app to demonstrate how to setup [react-envs](https://github.com/garronej/react-envs)
+This is a "hello world" app to demonstrate how to set up [react-envs](https://github.com/garronej/react-envs)
 in your project.
 
 ## Try it
@@ -26,12 +26,11 @@ Reach http://localhost:8083
 
 ## Config highlights
 
-```bash
-yarn add react-envs 
-```
-
 [`package.json`](https://github.com/garronej/react-envs-demo-app/blob/48b026b7cffb0284948951656b698d8b1f8ebd05/package.json#L14-L16)
 ```json
+"dependencies": {
+    "react-envs": "^0.1.3"
+},
 "scripts": {
     "postinstall": "generate-typed-env-getter",
     "prestart": "generate-typed-env-getter",
@@ -51,3 +50,5 @@ env.ts is a generated file, you don't want it tracked by git.
 ```dockerfile
 ENTRYPOINT sh -c "npx embed-environment-variables && nginx -g 'daemon off;'"
 ```
+The Docker images generated do **NOT** require an internet connection
+and does **NOT** bundle all your `node_modules/` dependencies. (Specified because it can look like it at first sight.)
