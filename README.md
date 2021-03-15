@@ -51,4 +51,4 @@ env.ts is a generated file, you don't want it tracked by git.
 ENTRYPOINT sh -c "npx embed-environment-variables && nginx -g 'daemon off;'"
 ```
 The Docker images generated do **NOT** require an internet connection
-and does **NOT** bundle all your `node_modules/` dependencies. (Specified because it can look like it at first sight.)
+nor does it bundle all your `node_modules/`. (Specified because it can look like it at first sight.)
