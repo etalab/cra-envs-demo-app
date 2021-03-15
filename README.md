@@ -1,4 +1,4 @@
-# Demo setup for [react-envs](https://github.com/garronej/embed-environnement-variables)
+# Demo setup for [react-envs](https://github.com/garronej/react-envs)
 
 ## In development environment
 
