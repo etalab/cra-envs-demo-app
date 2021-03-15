@@ -1,17 +1,19 @@
 {
-    "name": "keycloakify-demo-app",
-    "version": "0.2.1",
-    "description": "A demo project for keycloakify",
+    "name": "embed-react-app-envs-demo-app",
+    "version": "0.0.0",
+    "description": "A demo project for embed-react-app-envs",
     "repository": {
         "type": "git",
-        "url": "git://github.com/garronej/keycloakify-demo-app.git"
+        "url": "git://github.com/garronej/embed-react-app-envs-demo-app.git"
     },
     "scripts": {
         "build": "react-scripts build",
-        "keycloak": "yarn build && build-keycloak-theme",
         "start": "react-scripts start",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "postinstall": "generate-typed-env-getter",
+        "prestart": "generate-typed-env-getter",
+        "pretest": "generate-typed-env-getter"
     },
     "author": "u/garronej",
     "license": "MIT",
@@ -19,25 +21,18 @@
     "dependencies": {
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
-        "tss-react": "^0.0.11",
-        "web-vitals": "^1.0.1"
+        "embed-react-app-envs": "0.0.5"
     },
     "devDependencies": {
-        "@testing-library/jest-dom": "^5.11.4",
-        "@testing-library/react": "^11.1.0",
-        "@testing-library/user-event": "^12.1.10",
-        "@types/jest": "^26.0.15",
         "@types/node": "^12.0.0",
         "@types/react": "^17.0.0",
         "@types/react-dom": "^17.0.0",
-        "keycloakify": "^0.2.6",
         "react-scripts": "4.0.2",
         "typescript": "^4.1.2"
     },
     "eslintConfig": {
         "extends": [
-            "react-app",
-            "react-app/jest"
+            "react-app"
         ]
     },
     "browserslist": {
