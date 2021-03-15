@@ -8,12 +8,11 @@ RUN yarn build
 
 # production environment
 FROM nginx:stable-alpine
-COPY --from=build /app/nginx.conf /etc/nginx/conf.d/default.conf    
-WORKDIR /app
-COPY --from=build /app/build ./build
-COPY --from=build /app/.env .
-COPY --from=build /app/node_modules/react-envs/package.json ./re.json
 RUN apk add --update nodejs npm
+COPY --from=build /app/nginx.conf /etc/nginx/conf.d/default.conf    
+COPY --from=build /app/node_modules/react-envs/package.json ./re.json
 RUN npm i -g react-envs@`node -e 'console.log(require("./re.json")["version"])'`
-RUN rm -r /usr/share/nginx/html
-ENTRYPOINT sh -c "npx embed-environnement-variables && mv build /usr/share/nginx/html && nginx -g 'daemon off;'"
+WORKDIR /usr/share/nginx
+COPY --from=build /app/build ./html
+COPY --from=build /app/.env .
+ENTRYPOINT sh -c "npx embed-environnement-variables && nginx -g 'daemon off;'"
