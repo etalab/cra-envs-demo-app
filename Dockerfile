@@ -11,6 +11,7 @@ FROM nginx:stable-alpine
 COPY --from=build /app/nginx.conf /etc/nginx/conf.d/default.conf    
 WORKDIR /app
 COPY --from=build /app/build ./build
+COPY --from=build /app/.env .
 COPY --from=build /app/node_modules/react-envs/package.json ./re.json
 RUN apk add --update nodejs npm
 RUN npm i -g react-envs@`node -e 'console.log(require("./re.json")["version"])'`
