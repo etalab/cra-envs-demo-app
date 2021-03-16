@@ -26,7 +26,7 @@ Reach http://localhost:8083
 
 ## Config highlights
 
-[`package.json`](https://github.com/garronej/react-envs-demo-app/blob/48b026b7cffb0284948951656b698d8b1f8ebd05/package.json#L14-L16)
+[`package.json`](https://github.com/garronej/react-envs-demo-app/blob/a3af940b3d2aa53a13bbe82569623a4338df3384/package.json#L14-L16)
 ```json
 "dependencies": {
     "react-envs": "^0.1.4"
