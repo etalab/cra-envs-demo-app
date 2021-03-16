@@ -11,9 +11,9 @@
         "start": "react-scripts start",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "postinstall": "generate-typed-env-getter",
-        "prestart": "generate-typed-env-getter",
-        "pretest": "generate-typed-env-getter"
+        "postinstall": "generate-env-getter",
+        "prestart": "generate-env-getter",
+        "pretest": "generate-env-getter"
     },
     "author": "u/garronej",
     "license": "MIT",
@@ -21,7 +21,7 @@
     "dependencies": {
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
-        "react-envs": "^0.1.3"
+        "react-envs": "^0.1.4"
     },
     "devDependencies": {
         "@types/node": "^12.0.0",

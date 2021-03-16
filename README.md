@@ -29,15 +29,15 @@ Reach http://localhost:8083
 [`package.json`](https://github.com/garronej/react-envs-demo-app/blob/48b026b7cffb0284948951656b698d8b1f8ebd05/package.json#L14-L16)
 ```json
 "dependencies": {
-    "react-envs": "^0.1.3"
+    "react-envs": "^0.1.4"
 },
 "scripts": {
-    "postinstall": "generate-typed-env-getter",
-    "prestart": "generate-typed-env-getter",
-    "pretest": "generate-typed-env-getter"
+    "postinstall": "generate-env-getter",
+    "prestart": "generate-env-getter",
+    "pretest": "generate-env-getter"
 }
 ```
-Those scripts are optional, as long as you remember to rerun `npx generate-typed-env-getter`
+Those scripts are optional, as long as you remember to rerun `npx generate-env-getter`
 each time you update `.env` you are good.
 
 [`.gitignore`](https://github.com/garronej/react-envs-demo-app/blob/48b026b7cffb0284948951656b698d8b1f8ebd05/.gitignore#L10)
