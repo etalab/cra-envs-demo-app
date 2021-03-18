@@ -38,13 +38,14 @@ Reach http://localhost:8083
 }
 ```
 Those scripts are optional, as long as you remember to rerun `npx generate-env-getter`
-each time you update `.env` you are good.
+each time you update `.env` you are good.  
+Use `generate-env-getter js` to generate `src/env.js` instead of `src/env.ts`.
 
 [`.gitignore`](https://github.com/garronej/react-envs-demo-app/blob/48b026b7cffb0284948951656b698d8b1f8ebd05/.gitignore#L10)
 ```ini
 /src/env.ts
 ```
-env.ts is a generated file, you don't want it tracked by git.
+`env.ts` (or `env.js`) is a generated file, you don't want it tracked by git. 
 
 [`Dockerfile`](https://github.com/garronej/react-envs-demo-app/blob/48b026b7cffb0284948951656b698d8b1f8ebd05/Dockerfile#L18)
 ```dockerfile
