@@ -1,6 +1,6 @@
-# Demo setup for [react-envs](https://github.com/garronej/react-envs)
+# Demo setup for [cra-envs](https://github.com/garronej/cra-envs)
 
-This is a "hello world" app to demonstrate how to set up [react-envs](https://github.com/garronej/react-envs)
+This is a "hello world" app to demonstrate how to set up [cra-envs](https://github.com/garronej/cra-envs)
 in your project.
 
 ## Try it
@@ -17,8 +17,8 @@ REACT_APP_BAZ="Value of baz passed inline" yarn start
 ### In production environment
 
 ```bash
-docker build -t garronej/react-envs-demo-app:main .
-docker run -it --env BAZ="Value of baz on the server" -p 8083:80 garronej/react-envs-demo-app:main
+docker build -t garronej/cra-envs-demo-app:main .
+docker run -it --env BAZ="Value of baz on the server" -p 8083:80 garronej/cra-envs-demo-app:main
 ```
 Reach http://localhost:8083
 
@@ -26,10 +26,10 @@ Reach http://localhost:8083
 
 ## Config highlights
 
-[`package.json`](https://github.com/garronej/react-envs-demo-app/blob/a3af940b3d2aa53a13bbe82569623a4338df3384/package.json#L14-L16)
+[`package.json`](https://github.com/garronej/cra-envs-demo-app/blob/a3af940b3d2aa53a13bbe82569623a4338df3384/package.json#L14-L16)
 ```json
 "dependencies": {
-    "react-envs": "^0.1.4"
+    "cra-envs": "^0.1.4"
 },
 "scripts": {
     "postinstall": "generate-env-getter",
@@ -41,13 +41,13 @@ Those scripts are optional, as long as you remember to rerun `npx generate-env-g
 each time you update `.env` you are good.  
 Use `generate-env-getter js` to generate `src/env.js` instead of `src/env.ts`.
 
-[`.gitignore`](https://github.com/garronej/react-envs-demo-app/blob/48b026b7cffb0284948951656b698d8b1f8ebd05/.gitignore#L10)
+[`.gitignore`](https://github.com/garronej/cra-envs-demo-app/blob/48b026b7cffb0284948951656b698d8b1f8ebd05/.gitignore#L10)
 ```ini
 /src/env.ts
 ```
 `env.ts` (or `env.js`) is a generated file, you don't want it tracked by git. 
 
-[`Dockerfile`](https://github.com/garronej/react-envs-demo-app/blob/48b026b7cffb0284948951656b698d8b1f8ebd05/Dockerfile#L18)
+[`Dockerfile`](https://github.com/garronej/cra-envs-demo-app/blob/48b026b7cffb0284948951656b698d8b1f8ebd05/Dockerfile#L18)
 ```dockerfile
 ENTRYPOINT sh -c "npx embed-environment-variables && nginx -g 'daemon off;'"
 ```

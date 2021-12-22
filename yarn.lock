@@ -3543,6 +3543,16 @@ cosmiconfig@^7.0.0:
     path-type "^4.0.0"
     yaml "^1.10.0"
 
+cra-envs@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/cra-envs/-/cra-envs-1.0.0.tgz#569f3623aa31e46210df1b75c0453cc5cfc09c93"
+  integrity sha512-e0EK77dcUSgHY1llh0UIw+jzKQqXLVRQhwJV6Gkgu/o3i2kXp8mmApEyYgQWlhUjnb/ZqsmmbA+O7E9OQQVVEQ==
+  dependencies:
+    cheerio "^1.0.0-rc.5"
+    dotenv "^8.2.0"
+    minimal-polyfills "^2.1.6"
+    path "^0.12.7"
+
 create-ecdh@^4.0.0:
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/create-ecdh/-/create-ecdh-4.0.4.tgz#d6e7f4bffa66736085a0762fd3a632684dabcc4e"
@@ -9055,16 +9065,6 @@ react-dom@^17.0.1:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     scheduler "^0.20.1"
-
-react-envs@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/react-envs/-/react-envs-0.1.4.tgz#50bdc5eff8676cf2c32017e38b95a8ccf8e73ac4"
-  integrity sha512-YxSZHt6Cf6wqz1kNus+tbczqLO9i3WLy2lnuHxSQPqd5j/TVdiOCGJluE5cKQkzaLJjGth0GkMtD2JOLA4xk6w==
-  dependencies:
-    cheerio "^1.0.0-rc.5"
-    dotenv "^8.2.0"
-    minimal-polyfills "^2.1.6"
-    path "^0.12.7"
 
 react-error-overlay@^6.0.9:
   version "6.0.9"

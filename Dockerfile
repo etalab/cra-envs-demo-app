@@ -10,8 +10,8 @@ RUN yarn build
 FROM nginx:stable-alpine
 RUN apk add --update nodejs npm
 COPY --from=build /app/nginx.conf /etc/nginx/conf.d/default.conf    
-COPY --from=build /app/node_modules/react-envs/package.json ./re.json
-RUN npm i -g react-envs@`node -e 'console.log(require("./re.json")["version"])'`
+COPY --from=build /app/node_modules/cra-envs/package.json ./cra-envs-package.json
+RUN npm i -g cra-envs@`node -e 'console.log(require("./cra-envs-package.json")["version"])'`
 WORKDIR /usr/share/nginx
 COPY --from=build /app/build ./html
 COPY --from=build /app/.env .
