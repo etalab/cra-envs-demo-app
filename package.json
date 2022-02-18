@@ -19,7 +19,7 @@
     "license": "MIT",
     "keywords": [],
     "dependencies": {
-        "cra-envs": "^1.2.1",
+        "cra-envs": "^1.2.3",
         "react": "^17.0.1",
         "react-dom": "^17.0.1"
     },

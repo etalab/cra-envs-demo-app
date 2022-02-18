@@ -18,7 +18,14 @@ REACT_APP_BAZ="Value of baz passed inline" yarn start
 
 ```bash
 docker build -t garronej/cra-envs-demo-app:main .
-docker run -it --env BAZ="Value of baz on the server" -p 8083:80 garronej/cra-envs-demo-app:main
+
+docker run -it -p 8083:80 \
+    --env BAZ="Value of baz on the server" \
+    --env THEME_ID="france" \
+    --env HEADER_USECASE_DESCRIPTION="Le banc d'essai du SILL" \
+    --env HEADER_ORGANIZATION="Etalab" \
+    --env DESCRIPTION="Une plateforme pour essayer les logiciels du SILL" \
+    garronej/cra-envs-demo-app:main
 ```
 Reach http://localhost:8083
 
