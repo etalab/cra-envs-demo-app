@@ -1,12 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import { getEnv } from "./env";
+import { render } from 'react-dom';
+import { getEnv } from "./env";
 
-alert(JSON.stringify(getEnv(),null,2));
-
-ReactDOM.render(
-    <App />,
+render(
+  <p>{JSON.stringify(getEnv(), null, 2)}</p>,
   document.getElementById("root")
 );
