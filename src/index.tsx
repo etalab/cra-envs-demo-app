@@ -4,7 +4,6 @@ import "./index.css";
 
 const env = getEnv();
 
-
 render(
   <>
     <h1

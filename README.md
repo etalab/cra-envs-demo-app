@@ -12,7 +12,7 @@ yarn
 REACT_APP_BAZ="Value of baz passed inline" yarn start
 ```
 
-![image](https://user-images.githubusercontent.com/6702424/111223899-09e26d00-85de-11eb-84ea-566f9ed58eee.png)
+![image](https://user-images.githubusercontent.com/6702424/154806188-46c52a04-a5d8-4673-acc8-36bc98f2ee50.png)
 
 ### In production environment
 
@@ -29,14 +29,14 @@ docker run -it -p 8083:80 \
 ```
 Reach http://localhost:8083
 
-![image](https://user-images.githubusercontent.com/6702424/111223405-685b1b80-85dd-11eb-977c-e8ea1eda1e29.png)
+![image](https://user-images.githubusercontent.com/6702424/154806127-61cc3490-1053-4add-8636-77a0704dc022.png)
 
 ## Config highlights
 
 [`package.json`](https://github.com/garronej/cra-envs-demo-app/blob/a3af940b3d2aa53a13bbe82569623a4338df3384/package.json#L14-L16)
 ```json
 "dependencies": {
-    "cra-envs": "^0.1.4"
+    "cra-envs": "^1.2.4"
 },
 "scripts": {
     "postinstall": "generate-env-getter",

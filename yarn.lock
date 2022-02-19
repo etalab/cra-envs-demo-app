@@ -3487,10 +3487,10 @@ cosmiconfig@^7.0.0:
     path-type "^4.0.0"
     yaml "^1.10.0"
 
-cra-envs@^1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/cra-envs/-/cra-envs-1.2.3.tgz#6e442fb07934d48dd8cce9275c3e640cf51c5fca"
-  integrity sha512-xm7pRVZlTifyjIPRio96fBNsHYPu9GolfEZLVB/3jctU9PfJaf4UXhgE936ZtDJP3hUa2LL2uBjKF7O4Z8pVGw==
+cra-envs@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/cra-envs/-/cra-envs-1.2.4.tgz#d742105754cbf7a58b63114086588248c298822d"
+  integrity sha512-XvHZgTi3I5ghViFHe3bIYWlhxlKpfThdyweZrC66f4qJHbc/obXmGQSt1byZLvFQP/tqx/IZXfggrVfNtTNG4g==
   dependencies:
     cheerio "^1.0.0-rc.5"
     dotenv "^8.2.0"
